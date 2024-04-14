@@ -55,8 +55,8 @@ namespace com.ganast.jm.unity {
         [MenuItem(MENU_PREFIX + MENUITEM_BUILD_ALL + "...", false, 10)]
         public static void BuildAllTargets() {
             if (!EditorUtility.DisplayDialog("Build all targets", "Are you sure you want to build all targets? " +
-                "This might take some time and take up a lot of disk space.", "OK", "Cancel")
-            ) {
+                "This might take some time and take up a lot of disk space.", "OK", "Cancel"))
+            {
                 return;
             }
             foreach (KeyValuePair<string, BuildOption> i in buildOptions) {
